@@ -9,6 +9,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 @ExtendWith(MockitoExtension.class)
 class LionAlexTest {
 
@@ -32,10 +33,6 @@ class LionAlexTest {
         LionAlex lionAlex = new LionAlex(feline);
         assertEquals(0, lionAlex.getKittens());
     }
-
-
-
-
 
 
     @Test

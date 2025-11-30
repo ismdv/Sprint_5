@@ -9,6 +9,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 @ExtendWith(MockitoExtension.class)
 class LionTest {
 
@@ -37,7 +38,6 @@ class LionTest {
     }
 
 
-
     @Test
     void getFood() throws Exception {
         Lion lion = new Lion("Самец", feline);
@@ -46,7 +46,7 @@ class LionTest {
     }
 
     @Test
-    void constructor_throwsException() {
+    void constructorThrowsException() {
         Exception exception = assertThrows(
                 Exception.class,
                 () -> new Lion("", feline),

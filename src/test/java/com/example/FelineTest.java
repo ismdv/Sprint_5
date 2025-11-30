@@ -2,20 +2,15 @@ package com.example;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mockito;
-import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 @ExtendWith(MockitoExtension.class)
 class FelineTest {
-
-
-    @Spy
-    Feline feline = new Feline();
 
 
     @Test
@@ -27,7 +22,7 @@ class FelineTest {
 
     @Test
     void getKittens() {
-        Mockito.when(feline.getKittens(1)).thenReturn(1);
+        Feline feline = new Feline();
         assertEquals(1, feline.getKittens());
     }
 
@@ -42,6 +37,6 @@ class FelineTest {
     void eatMeat() throws Exception {
         Feline feline = new Feline();
         List str = feline.getFood("Хищник");
-        assertEquals(str,feline.eatMeat());
+        assertEquals(str, feline.eatMeat());
     }
 }
