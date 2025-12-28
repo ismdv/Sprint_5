@@ -1,4 +1,4 @@
-package example;
+package com.example;
 
 import java.util.List;
 
@@ -10,6 +10,8 @@ public class Animal {
         } else if ("Хищник".equals(animalKind)) {
             return List.of("Животные", "Птицы", "Рыба");
         } else {
+
+
             throw new Exception("Неизвестный вид животного, используйте значение Травоядное или Хищник");
         }
     }
